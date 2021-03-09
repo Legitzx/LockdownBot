@@ -1,0 +1,2 @@
+# LockdownBot
+Secures Discord Servers
