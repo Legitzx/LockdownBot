@@ -14,6 +14,6 @@ Once you have registered with the bot, you are ready to view the content within 
  - ``!logout`` - Logs you out of the current server. [Must be sent in Server Chat]
 
 # Admin Commands
- - ``!list`` - Lists all the users who are currently authenticated.
- - ``!deauth <@user> - Removes authentication from a user.
- - ``!selfdestruct - Removes authentication from all users & prevents users from authenticating.
+ - ``!list`` - Lists all the users who are currently authenticated. [Must be sent in Server Chat]
+ - ``!deauth`` <@user> - Removes authentication from a user. [Must be sent in Server Chat]
+ - ``!selfdestruct`` - Removes authentication from all users & prevents users from authenticating. [Must be sent in Server Chat]
