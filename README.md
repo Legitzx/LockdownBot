@@ -9,11 +9,15 @@ Register with the LockdownBot. Direct message the LockdownBot ``!register <passw
 ## Step 2
 Once you have registered with the bot, you are ready to view the content within the server. You will be given the *Authenticated* role and will be able to access channels that have that role added.
 
-# User Commands
- - ``!register <password`` - Registers you with the bot. [Must be sent in Direct Messages]
+# Commands
+
+## User Commands
+ - ``!register <password>`` - Registers you with the bot. [Must be sent in Direct Messages]
+ - ``!login <password>`` - Logs you in, **must be registered.** [Must be sent in Direct Messages]
  - ``!logout`` - Logs you out of the current server. [Must be sent in Server Chat]
 
-# Admin Commands
- - ``!list`` - Lists all the users who are currently authenticated. [Must be sent in Server Chat]
- - ``!deauth`` <@user> - Removes authentication from a user. [Must be sent in Server Chat]
- - ``!selfdestruct`` - Removes authentication from all users & prevents users from authenticating. [Must be sent in Server Chat]
+## Admin Commands
+ - ``!kill`` <@user> - Adds user to a blacklist, this restricts them from loging in. [Must be sent in Server Chat]
+ - ``!revive`` <@user> - Removes user from blacklist. 
+ - ``!server lock`` - Removes authentication from all users & prevents users from authenticating. [Must be sent in Server Chat]
+ - ``!server unlock`` - Unlocks the server, users can now login again. 
