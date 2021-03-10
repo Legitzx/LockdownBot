@@ -1,5 +1,5 @@
 # LockdownBot
-Secures Discord Servers by requiring a password to view the content. X amount of minutes after loging in, your authentication will be revoked. At this point, you must login again. 
+Secures Discord Servers by requiring a password to view the content. When you login, you will only have X amount of minutes to view the server before your authentication expires. Then you will have to relogin to view the server.
 
 # How it works
 
@@ -18,6 +18,6 @@ Once you have registered with the bot, you are ready to view the content within 
 
 ## Admin Commands
  - ``!kill <@user>`` - Adds user to a blacklist, this restricts them from loging in. [Must be sent in Server Chat]
- - ``!revive <@user>`` - Removes user from blacklist. 
+ - ``!revive <@user>`` - Removes user from blacklist. [Must be sent in Server Chat]
  - ``!server lock`` - Removes authentication from all users & prevents users from authenticating. [Must be sent in Server Chat]
- - ``!server unlock`` - Unlocks the server, users can now login again. 
+ - ``!server unlock`` - Unlocks the server, users can now login again. [Must be sent in Server Chat]
