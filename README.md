@@ -17,7 +17,7 @@ Once you have registered with the bot, you are ready to view the content within 
  - ``!logout`` - Logs you out of the current server. [Must be sent in Server Chat]
 
 ## Admin Commands
- - ``!kill`` <@user> - Adds user to a blacklist, this restricts them from loging in. [Must be sent in Server Chat]
- - ``!revive`` <@user> - Removes user from blacklist. 
+ - ``!kill <@user>`` - Adds user to a blacklist, this restricts them from loging in. [Must be sent in Server Chat]
+ - ``!revive <@user>`` - Removes user from blacklist. 
  - ``!server lock`` - Removes authentication from all users & prevents users from authenticating. [Must be sent in Server Chat]
  - ``!server unlock`` - Unlocks the server, users can now login again. 
