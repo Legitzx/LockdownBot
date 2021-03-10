@@ -1,5 +1,5 @@
 # LockdownBot
-Secures Discord Servers by requiring a password to view the content. When you login, you will only have X amount of minutes to view the server before your authentication expires. Then you will have to relogin to view the server.
+Secures Discord Servers by requiring a password to view the channels. When you login, you will only have X amount of minutes to view the server before your authentication expires. Then you will have to relogin to view the server.
 
 # How it works
 
