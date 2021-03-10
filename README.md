@@ -16,6 +16,10 @@ Once you have registered with the bot, you are ready to view the content within 
  - ``!login <password>`` - Logs you in, **must be registered.** [Must be sent in Direct Messages]
  - ``!logout`` - Logs you out of the current server. [Must be sent in Server Chat]
 
+:::caution
+Well what happens if I forgot my password? - IDK
+:::
+
 ## Admin Commands
  - ``!kill <@user>`` - Adds user to a blacklist, this restricts them from loging in. [Must be sent in Server Chat]
  - ``!revive <@user>`` - Removes user from blacklist. [Must be sent in Server Chat]
