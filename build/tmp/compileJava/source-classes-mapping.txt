@@ -1,2 +1,4 @@
+utils/Config.java
+ utils.Config
 Bot.java
  Bot
