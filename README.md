@@ -20,8 +20,8 @@ Once you have registered with the bot, you are ready to login and view the conte
  - ``!logout`` - Logs you out of the current server. **[Must be sent in Server Chat]**
 
 ## Admin Commands
- - ``!server add <@models>`` - Adds a models to the authentication list. This allows them to register and login. **[Must be sent in Server Chat]**
- - ``!server remove <@models>`` - Removes a models from the authentication list. This deletes their account and which prevents them from logging in. **[Must be sent in Server Chat]**
+ - ``!server add <@user>`` - Adds a user to the authentication list. This allows them to register and login. **[Must be sent in Server Chat]**
+ - ``!server remove <@user>`` - Removes a user from the authentication list. This deletes their account and which prevents them from logging in. **[Must be sent in Server Chat]**
  - ``!server list`` - Lists all authenticated users and also shows if they are logged in or not. **[Must be sent in Server Chat]**
  - ``!server lock`` - Temporarily removes authentication from all users & prevents users from logging in until you unlock the server. **[Must be sent in Server Chat]**
  - ``!server unlock`` - Unlocks the server, users can now login again. **[Must be sent in Server Chat]**
