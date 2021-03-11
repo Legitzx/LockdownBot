@@ -8,7 +8,7 @@ import javax.security.auth.login.LoginException;
  */
 public class Bot {
     public Bot() throws LoginException {
-        JDABuilder builder = JDABuilder.createLight("ODE3NTE2MDcyMjQwMDIxNTE0.YEKpLA.I_zA3Wc-gYb2Q83Ep9pt51i3C-E");
+        JDABuilder builder = JDABuilder.createLight("TOKEN");
 
         builder.build();
     }
