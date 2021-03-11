@@ -1,4 +1,8 @@
 utils/Config.java
  utils.Config
-Bot.java
- Bot
+database/DatabaseConnection.java
+ database.DatabaseConnection
+core/Bot.java
+ core.Bot
+database/DatabaseApi.java
+ database.DatabaseApi
