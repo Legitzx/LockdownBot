@@ -1,5 +1,13 @@
 utils/Config.java
  utils.Config
+models/LockdownServerConverter.java
+ models.LockdownServerConverter
+models/LockdownUserConverter.java
+ models.LockdownUserConverter
+models/LockdownServer.java
+ models.LockdownServer
+models/LockdownUser.java
+ models.LockdownUser
 database/DatabaseConnection.java
  database.DatabaseConnection
 core/Bot.java
