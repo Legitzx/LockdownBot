@@ -8,9 +8,21 @@ models/LockdownServer.java
  models.LockdownServer
 models/LockdownUser.java
  models.LockdownUser
+utils/Action.java
+ utils.Action
+commands/RegisterCommand.java
+ commands.RegisterCommand
+events/ServerJoinEvent.java
+ events.ServerJoinEvent
 database/DatabaseConnection.java
  database.DatabaseConnection
 core/Bot.java
  core.Bot
 database/DatabaseApi.java
  database.DatabaseApi
+commands/LogoutCommand.java
+ commands.LogoutCommand
+commands/LoginCommand.java
+ commands.LoginCommand
+managers/AuthenticationManager.java
+ managers.AuthenticationManager

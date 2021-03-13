@@ -1,11 +1,16 @@
 package database;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.lang.Nullable;
 import core.Bot;
 import models.LockdownServer;
 import models.LockdownUser;
 import org.bson.Document;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  * Contributor(s): Luciano K
@@ -88,5 +93,26 @@ public class DatabaseApi extends DatabaseConnection {
      */
     public void updateLockdownServer(LockdownServer server) {
         serverCollection.findOneAndUpdate(new Document("id", server.getId()), new Document("$set", bot.getServerConverter().serialize(server)));
+    }
+
+    /**
+     * Returns all the servers that have a users id on their auth list
+     * @param id        user id
+     * @return          servers that contain the user id
+     */
+    public List<LockdownServer> getServersThatHaveThisUser(String id) {
+        List<LockdownServer> contains = new ArrayList<>();
+
+        FindIterable<Document> iterable = serverCollection.find();
+        Iterator it = iterable.iterator();
+        while(it.hasNext()) {
+            LockdownServer server = bot.getServerConverter().deserialize((Document) it.next());
+
+            if(server.getAuthList().contains(id)) {
+                contains.add(server);
+            }
+        }
+
+        return contains;
     }
 }

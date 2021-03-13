@@ -1,15 +1,21 @@
 package core;
 
+import commands.LoginCommand;
+import commands.LogoutCommand;
+import commands.RegisterCommand;
 import database.DatabaseApi;
-import models.LockdownServer;
+import events.ServerJoinEvent;
+import managers.AuthenticationManager;
 import models.LockdownServerConverter;
 import models.LockdownUserConverter;
+import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.utils.ChunkingFilter;
+import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import utils.Config;
 
 import javax.security.auth.login.LoginException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Contributor(s): Luciano K
@@ -26,15 +32,34 @@ public class Bot {
     private LockdownServerConverter serverConverter;
     private LockdownUserConverter userConverter;
 
-    public Bot() throws LoginException {
-        // Initialize Dependencies
+    // Managers
+    private AuthenticationManager authenticationManager;
+
+    // JDA
+    private JDA api;
+
+    public Bot() throws LoginException, InterruptedException {
+        // Setup config
         config = new Config();
+
+        // Setup up JDA
+        api = JDABuilder.createDefault(config.get("TOKEN"))
+                .setChunkingFilter(ChunkingFilter.ALL)
+                .setMemberCachePolicy(MemberCachePolicy.ALL)
+                .enableIntents(GatewayIntent.GUILD_MEMBERS)
+                .addEventListeners(new RegisterCommand(this))
+                .addEventListeners(new LoginCommand(this))
+                .addEventListeners(new LogoutCommand(this))
+                .addEventListeners(new ServerJoinEvent(this))
+                .build().awaitReady();
+
+        // Initialize Dependencies
         databaseApi = new DatabaseApi(this);
         serverConverter = new LockdownServerConverter();
         userConverter = new LockdownUserConverter();
+        authenticationManager = new AuthenticationManager(this);
 
-        JDABuilder builder = JDABuilder.createLight(config.get("TOKEN"));
-        builder.build();
+        // TODO: When the bot turns on, automatically set everyones isLoggedIn booleans to false on Mongo
     }
 
     public Config getConfig() {
@@ -53,7 +78,15 @@ public class Bot {
         return userConverter;
     }
 
-    public static void main(String[] args) throws LoginException {
+    public AuthenticationManager getAuthenticationManager() {
+        return authenticationManager;
+    }
+
+    public JDA getJDA() {
+        return api;
+    }
+
+    public static void main(String[] args) throws LoginException, InterruptedException {
         new Bot();
     }
 }
