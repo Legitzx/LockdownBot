@@ -1,28 +1,30 @@
 utils/Config.java
  utils.Config
-models/LockdownServerConverter.java
- models.LockdownServerConverter
-models/LockdownUserConverter.java
- models.LockdownUserConverter
-models/LockdownServer.java
- models.LockdownServer
 models/LockdownUser.java
  models.LockdownUser
+models/LockdownUserConverter.java
+ models.LockdownUserConverter
 utils/Action.java
  utils.Action
 commands/RegisterCommand.java
  commands.RegisterCommand
 events/ServerJoinEvent.java
  events.ServerJoinEvent
+models/LockdownServerConverter.java
+ models.LockdownServerConverter
 database/DatabaseConnection.java
  database.DatabaseConnection
-core/Bot.java
- core.Bot
+managers/AuthenticationManager.java
+ managers.AuthenticationManager
 database/DatabaseApi.java
  database.DatabaseApi
 commands/LogoutCommand.java
  commands.LogoutCommand
 commands/LoginCommand.java
  commands.LoginCommand
-managers/AuthenticationManager.java
- managers.AuthenticationManager
+models/LockdownServer.java
+ models.LockdownServer
+core/Bot.java
+ core.Bot
+commands/ServerCommands.java
+ commands.ServerCommands

@@ -3,6 +3,7 @@ package core;
 import commands.LoginCommand;
 import commands.LogoutCommand;
 import commands.RegisterCommand;
+import commands.ServerCommands;
 import database.DatabaseApi;
 import events.ServerJoinEvent;
 import managers.AuthenticationManager;
@@ -51,6 +52,7 @@ public class Bot {
                 .addEventListeners(new LoginCommand(this))
                 .addEventListeners(new LogoutCommand(this))
                 .addEventListeners(new ServerJoinEvent(this))
+                .addEventListeners(new ServerCommands(this))
                 .build().awaitReady();
 
         // Initialize Dependencies

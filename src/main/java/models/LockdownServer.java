@@ -60,4 +60,20 @@ public class LockdownServer {
     public void setIdRole(String idRole) {
         this.idRole = idRole;
     }
+
+    public boolean addUserToAuthList(String id) {
+        if(!authList.contains(id)) {
+            authList.add(id);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean removeUserFromAuthList(String id) {
+        if(authList.contains(id)) {
+            authList.remove(id);
+            return true;
+        }
+        return false;
+    }
 }
