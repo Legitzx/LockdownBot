@@ -37,10 +37,10 @@ Once you have registered with the bot, you are ready to login and view the conte
 # Configuration
 
 LockdownBot uses .env files to help configure the bot.
- - TOKEN: Token for the discord bot.
- - URI: MongoDB URI.
- - DATABASE: Database name
- - SERVER_COLLECTION: Collection for the server information.
- - USER_COLLECTION: Collection for the user information.
- - LOGOUT_DELAY: The amount of minutes that the bot will wait to log a user out.
- - PREFIX: Prefix for the bot, default is ``!``.
+ - ``TOKEN``: Token for the discord bot.
+ - ``URI``: MongoDB URI.
+ - ``DATABASE``: Database name
+ - ``SERVER_COLLECTION``: Collection for the server information.
+ - ``USER_COLLECTION``: Collection for the user information.
+ - ``LOGOUT_DELAY``: The amount of minutes that the bot will wait to log a user out.
+ - ``PREFIX``: Prefix for the bot, default is ``!``.
